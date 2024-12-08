@@ -155,5 +155,18 @@ public class Main {
 		return ex8(n.getNext(),x);
 
 	}
+
+	public static void ex9(Node <Integer> L1, Node <Integer> L2) {
+		Node<Integer> h =L1;
+		while (h != null) {
+			Node<Integer> p =L2;
+			while (p != null) {
+				if (p.getValue() == h.gatValue())
+					System.out.println(p.getValue());
+				p = p.getNext();
+			}
+			h = h.getNext;
+		}
+	}
 }
 	
