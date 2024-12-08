@@ -115,5 +115,45 @@ public class Main {
 		return tmp;
 		
 	}
+
+	public static boolean ex5(Node <Integer> h, int x) {
+
+		Node <Integer> p = h;
+
+		while(p != null) {
+
+			if (p.getValue() == x) {
+
+				return true;
+
+			}
+
+			p = p.getNext();
+
+		}
+
+		return false;
+
+	}
+
+// סעיף 8 משתמשת בפעולה 5 כעזר
+
+	public static boolean ex8(Node <Integer> n, Node <Integer> x) {
+
+		if (n == null) {
+
+			return true;
+
+		}
+
+		if  (isFound(x,n.getValue()) == false) {
+
+			return false;
+
+		}
+
+		return ex8(n.getNext(),x);
+
+	}
 }
 	
