@@ -161,12 +161,31 @@ public class Main {
 		while (h != null) {
 			Node<Integer> p =L2;
 			while (p != null) {
-				if (p.getValue() == h.gatValue())
+				if (p.getValue() == h.getValue())
 					System.out.println(p.getValue());
 				p = p.getNext();
 			}
-			h = h.getNext;
+			h = h.getNext();
 		}
+	}
+	
+	public static Node <Integer> ex10(Node <Integer> L1, Node <Integer> L2) {
+		Node<Integer> head = new Node<Integer> (-1, null) ;
+		if (( L1 == null) || (L2 == null))
+			return null;
+			
+		while (L1 != null) {
+			Node<Integer> p = L2;
+			while (p != null) {
+				if (L1.getValue() == p.getValue()) {
+					Node<Integer> tmp = new Node<Integer> (L1.getValue(), head.getNext()) ;
+					head.setNext(tmp);
+				}
+				p = p.getNext();
+			}
+			L1 = L1.getNext();
+		}
+		return head.getNext();
 	}
 }
 	
