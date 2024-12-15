@@ -187,5 +187,20 @@ public class Main {
 		}
 		return head.getNext();
 	}
+	public static Node<Integer> ex11(Node<Integer> list1, Node<Integer> list2){
+			if (( L1 == null) || (L2 == null))
+				return null;
+			while (L1 != null) {
+				Node<Integer> p = L2;
+				while (p != null) {
+					if (L1.getValue() == p.getValue()) {
+						deleteNodeX(L1, L1.getValue)
+					}
+					p = p.getNext();
+				}
+				L1 = L1.getNext();
+			}
+			return head.getNext();
+		}
 }
 	
