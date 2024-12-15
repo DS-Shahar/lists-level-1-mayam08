@@ -194,7 +194,7 @@ public class Main {
 				Node<Integer> p = L2;
 				while (p != null) {
 					if (L1.getValue() == p.getValue()) {
-						deleteNodeX(L1, L1.getValue)
+						deleteNodeX(L1, L1.getValue);
 					}
 					p = p.getNext();
 				}
